@@ -1,0 +1,159 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+}
+
+.container {
+    text-align: center;
+    width: 100%; /* Ancho completo */
+    max-width: 1000px; /* Ajuste para que el contenedor no sea demasiado amplio */
+    padding: 20px; /* Espaciado interno */
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+.open-button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #FF69B4;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* Para alinear imagen y texto */
+    align-items: center;
+    gap: 10px; /* Espacio entre imagen y texto */
+    transition: background-color 0.3s ease;
+}
+
+.open-button:hover {
+    background-color: #ff8ec6;
+}
+
+.button-image {
+    width: 24px; /* Tamaño del icono */
+    height: 24px;
+}
+
+/* Estilos para la carta */
+.card {
+    display: none;
+    background-color: white;
+    width: 90%; /* Ancho responsivo */
+    margin: 20px auto;
+    padding: 20px; /* Ajuste del padding */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.image {
+    width: 30%; /* Ajustar el ancho de la imagen al 50% */
+    height: auto; /* Mantener la proporción */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.text h2 {
+    color: #FF69B4;
+    font-size: 24px; /* Ajuste del tamaño del texto */
+    margin-bottom: 15px;
+}
+
+.text p {
+    font-size: 16px; /* Ajuste del tamaño del texto */
+    color: #333;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.close-button {
+    font-size: 24px;
+    color: #333;
+    float: right;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #FF69B4;
+}
+
+/* Adaptaciones responsivas */
+
+/* Estilos para pantallas grandes (PCs, tablets grandes) */
+@media (min-width: 1024px) {
+    .open-button {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+    .button-image {
+        width: 32px;
+        height: 32px;
+    }
+    .card {
+        max-width: 800px; /* Ajuste del ancho máximo para pantallas grandes */
+    }
+    .text h2 {
+        font-size: 28px;
+    }
+    .text p {
+        font-size: 20px;
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) and (min-width: 600px) {
+    .open-button {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+    .button-image {
+        width: 28px;
+        height: 28px;
+    }
+    .card {
+        width: 90%; /* Ajuste del ancho */
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 600px) {
+    .open-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .button-image {
+        width: 24px;
+        height: 24px;
+    }
+    .card {
+        width: 95%; /* Ajuste del ancho */
+        padding: 15px; /* Ajuste del padding */
+    }
+    .text h2 {
+        font-size: 22px; /* Ajuste del tamaño del texto */
+    }
+    .text p {
+        font-size: 14px; /* Ajuste del tamaño del texto */
+    }
+}

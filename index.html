@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para ti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Botón con imagen -->
+        <button id="openButton" class="open-button" onclick="openCard()">
+            <img src="img/1.jpeg" alt="Corazón" class="button-image"> <!-- Cambia icono_corazon.png por tu imagen -->
+            Abrir Carta
+        </button>
+        
+        <div id="card" class="card">
+            <span class="close-button" onclick="closeCard()">&times;</span>
+            <img src="img/2.jpeg" alt="Una foto especial" class="image">
+            <div class="text">
+                <h2>Mi amor</h2>
+                <p>Con cada amanecer, mi corazón se llena de una alegría inmensa al saber que estás a mi lado. Eres la razón por la que sonrío sin motivo, la melodía que calma mi alma y el motivo por el que quiero seguir creciendo cada día.
+
+                    Recuerdo la primera vez que te vi; fue como si el mundo se pusiera en pausa. Tu sonrisa iluminó mi día y supe, en ese instante, que había encontrado algo especial. Con el paso del tiempo, ese sentimiento ha crecido y se ha fortalecido, convirtiéndose en el amor más puro y verdadero que jamás he conocido.
+                    
+                    Admiro tu [carisma, tus celos, tu malgenio]. Me encanta la forma en que [En como te Ries, como miras, como caminas, me encanta todo de ti baby ]. A tu lado, soy una versión mejor de mí mismo.
+                    
+                    Gracias por escucharme con paciencia, por apoyarme en mis sueños y por celebrar mis éxitos. Gracias por ser mi confidente, mi cómplice y mi mejor amiga. Contigo, he aprendido a amar de una manera que nunca imaginé posible.
+                    
+                    Cada momento que pasamos juntos es un tesoro que atesoraré por siempre. Desde nuestras conversaciones profundas hasta nuestros silencios cómplices, todo es perfecto a tu lado. Me siento tan afortunado de tenerte en mi vida.
+                    
+                    Prometo amarte, respetarte y cuidarte siempre. Prometo ser tu compañero en las buenas y en las malas, en la salud y en la enfermedad. Prometo hacer todo lo posible para que seas feliz.
+                    
+                    Te amo más allá de las palabras.
+                    
+                    Con todo mi amor,
+                    Sergio 💗💘.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCard() {
+            document.getElementById("card").classList.add("show");
+            document.getElementById("card").style.display = "block";
+            document.getElementById("openButton").style.display = "none"; // Ocultar el botón
+        }
+
+        function closeCard() {
+            document.getElementById("card").classList.remove("show");
+            setTimeout(function() {
+                document.getElementById("card").style.display = "none";
+                document.getElementById("openButton").style.display = "block"; // Mostrar el botón nuevamente
+            }, 400);  // Coincide con la duración de la transición
+        }
+    </script>
+
+</body>
+</html>
